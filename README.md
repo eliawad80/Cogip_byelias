@@ -2,7 +2,7 @@
 
 **Type**: project </br>
 **Competency**: is able to deploy a website on a web server </br>
-**Duration**: 2 days
+**Duration**: 5 days
 
 ## The mission
 
@@ -18,7 +18,7 @@ Follow the instructions below to get started:
 - Actually **deploy the website** on the server.
 - **Secure** the server as much as possible with things such as firewalls and [reverse proxy](https://www.cloudflare.com/en-gb/learning/cdn/glossary/reverse-proxy/).
 
-This challenge is special in that you receive a **potentially buggy**, **insecure** and **undocumented** website to deploy. Some word of caution though, don't get too scared at the sight of a piece of software you don't know. Take the time to research any new concepts or technologies and slowly try to put the pieces of the puzzle together.
+This challenge is special in that you receive a **potentially buggy**, **insecure** and **undocumented** website to deploy. Some word of caution though, don't get too scared at the sight of a piece of software you don't know. Take the time to research any new concepts or technologies and slowly try to put the pieces of the puzzle together. To spice things up and **practice**, you can first deploy the website locally then try to dockerize it.
 
 > **NOTE**: Depending on how you setup the database, you might have to change the values of the connection PHP script (`./databases/connection.php`) in the codebase.
 
@@ -30,4 +30,4 @@ This challenge is special in that you receive a **potentially buggy**, **insecur
 
 ## Expected Output
 
-TODO
+At the end of this challenge you should be able to deploy an undocumented application, which should be verifiable by the application running.
