@@ -1,0 +1,36 @@
+version: '3'
+services:
+  web:
+    image: httpdphp:latest
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: cogip
+    depends_on:
+      - db
+    links:
+      - "db"
+
+  db:
+    image: mysql:5.7.41
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=cogip
+    command: --default-authentication-plugin=mysql_native_password
+  
+    volumes:
+      - ./oldatabase:/docker-entrypoint-initdb.d/
+      - ./newdata:/var/lib/mysql
+    # command: ["bash", "-c", "chown -R mysql:mysql /var/lib/mysql"]
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
